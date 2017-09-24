@@ -26,15 +26,14 @@ SET time_zone = "+00:00";
 -- Stable structure `customer`
 --
 
-CREATE TABLE IF NOT EXISTS `retail` (
+CREATE TABLE IF NOT EXISTS `locations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(200) NOT NULL,
-  `type` varchar(200) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `height` varchar(200) NOT NULL,
-  `width` varchar(200) NOT NULL,
-  `price` varchar(200) NOT NULL,
-  `rating` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `phone` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `hours` varchar(200) NOT NULL,
+  `map` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
@@ -42,17 +41,9 @@ CREATE TABLE IF NOT EXISTS `retail` (
 -- Dumping data for table`retail`
 --
 
-INSERT INTO `retail` (`id`, `title`, `type`, `description`, `height`, `width`, `price`, `rating`) VALUES
-(1, 'Fan Heater', 'Appliances', 'This fan heater has overheat protection and 2 heat settings.', '700', '300', '15.00', '3'),
-(2, 'Large Rectangle Basket', 'Home decor', 'This woven basket offers you a convenient storage option for books, magazines or laundry.', '1000', '300', '14.00', '1'),
-(3, 'Industrial Jogger Pants', 'Jeans and pants', 'Rough out a hard day at work in these industrial jogger pants that feature a relaxed and comfortable fit suited for all day wear.', '900', '200', '30.00', '5'),
-(4, 'Lolly Bike', 'Bikes', 'The perfect bike for a rider growing in confidence. Features a double cycle chain guard, rear coaster brakes and front caliper brakes.', '1220', '500', '69.00', '3'),
-(5, 'Trampoline with Enclosure Combo', 'Outdoor games', 'The galvanised steel frame and UV- resistantmat makes this trampoline durable.', '2730', '3050', '189.00', '5'),
-(6, 'Active Zip Through Running Jacket', 'Womens Activewear', 'Crafted for your active lifestyle, this jacket will keep your warm and snug as you head out for a brisk jog or workout session.', '500', '400', '20.00', '3'),
-(7, 'Build Your Own Solar Chopper', 'Science Toys', 'Build your own solar helicopter then watch it fly under the power of the sun! Easy to assemble, no glue or tools needed.', '300', '300', '10.00', '3'),
-(8, 'Pineapple Night Light', 'Lighting', 'This cool pineapple night light casts a soothing glow that can help kids fall into a restful slumber.', '230', '170', '9.00', '1'),
-(9, 'Macadamia Oil Conditioner - 250ml', 'Hair', 'With the nourishment of macadamia oil, this conditioner is just what you need to pamper your hair after a good shampoo.', '100', '50', '3.00', '3'),
-(10, 'Portable Charger - Grid', 'Phone accessories', 'This portable charger is must-have accessory to recharge your smartphone on the go. Featuring a lightweight and slim design, the portable charger will comfortably fit into your pocket or handbag.', '80', '40', '10.00', '3');
+INSERT INTO `locations` (`id`, `name`, `address`, `phone`, `email`, `hours`, `map`) VALUES
+(1, 'RAC Travel & Cruise Applecross', '2/14-16 Riseley St, Ardross, WA', '(08) 6150 6459', 'travel.applecross@rac.com.au', 'Mon: 9:00am - 5:00pm, Tue: 9:00am - 5:00pm, Wed: 9:00am - 5:00pm, Thr: 9:00am - 5:00pm, Fri: 9:00am - 5:00pm, Sat: 9:00am - 4:00pm, Sun: Closed', 'https://www.google.com.au/maps/place/RAC+Travel+%26+Cruise+Applecross/@-32.0208285,115.8325026,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32a346cec6b42b:0x1bab8ace2e2bafa0!8m2!3d-32.0208285!4d115.8346913'),
+(2, 'RAC Travel Carousel', 'Shop 1098, Westfield Carousel Shopping Centre 1382 Albany Highway, Cannington, WA', '(08) 6150 6454', 'travel.carousel@rac.com.au', 'Mon: 9:00am - 5:00pm, Tue: 9:00am - 5:00pm, Wed: 9:00am - 5:00pm, Thr: 9:00am - 5:00pm, Fri: 9:00am - 5:00pm, Sat: 9:00am - 4:00pm, Sun: Closed', 'https://www.google.com.au/maps/place/RAC+Travel+Carousel/@-32.0173163,115.9377257,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32bc2de7a0cfbd:0x660bb0342c97a8a7!8m2!3d-32.0173163!4d115.9399144');
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

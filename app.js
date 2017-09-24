@@ -9,8 +9,8 @@ var http = require('http');
 var path = require('path');
 
 //load list route
-var retail = require('./routes/retail');
-var retailweb = require('./routes/retailweb');
+var locations = require('./routes/locations');
+var locationsweb = require('./routes/locationsweb');
 var app = express();
 
 var connection  = require('express-myconnection');
@@ -46,7 +46,7 @@ app.use(
         user: 'dbadmin',
         password : 'dbpassword',
         port : 3306, // port mysql service
-        database:'retail'
+        database:'locations'
 
     },'pool') // pool or single
 
@@ -57,14 +57,14 @@ app.use(
 app.get('/', routes.index);
 
 // Base API
-app.get('/retail', retail.listall);
-app.get('/retail/list', retail.listsummary);
-app.get('/retail/details/:id', retail.details);
+app.get('/locations', locations.listall);
+app.get('/locations/list', locations.listsummary);
+app.get('/locations/details/:id', locations.details);
 
 // Web application
-app.get('/retailweb', retailweb.listall);
-app.get('/retailweb/list', retailweb.listsummary);
-app.get('/retailweb/details/:id', retailweb.details);
+app.get('/locationsweb', locationsweb.listall);
+app.get('/locationsweb/list', locationsweb.listsummary);
+app.get('/locationsweb/details/:id', locationsweb.details);
 
 
 
