@@ -59,12 +59,12 @@ app.get('/', routes.index);
 // Base API
 app.get('/locations', locations.listall);
 app.get('/locations/list', locations.listsummary);
-app.get('/locations/details/:id', locations.details);
+app.get('/locations/details/:postcode', locations.details);
 
 // Web application
 app.get('/locationsweb', locationsweb.listall);
 app.get('/locationsweb/list', locationsweb.listsummary);
-app.get('/locationsweb/details/:id', locationsweb.details);
+app.get('/locationsweb/details/:postcode', locationsweb.details);
 
 
 
