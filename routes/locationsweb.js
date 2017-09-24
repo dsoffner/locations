@@ -47,9 +47,9 @@ exports.details = function(req, res){
 
   req.getConnection(function(err,connection){
 
-        var id = req.params.id;
+        var postcode = req.params.postcode;
 
-        var query = connection.query("SELECT * FROM locations WHERE id = ?",[id],function(err,rows)
+        var query = connection.query("SELECT * FROM locations WHERE postcode = ?",[postcode],function(err,rows)
         {
 
             if(err)
