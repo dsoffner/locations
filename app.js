@@ -57,6 +57,7 @@ app.use(
 app.get('/', locationsweb.listall);
 
 // Base API
+app.get('/locations', locations.listall);
 app.get('/locations/details/:postcode', locations.details);
 
 // Web application
