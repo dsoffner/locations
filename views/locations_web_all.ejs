@@ -1,45 +1,51 @@
-<%- include layouts/header.ejs %>
+<!DOCTYPE html>
+</html>
+    <head>
+        <title>Locations</title>
+        <link href="/../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <script type="text/javascript" src="/../js/all.js"></script>
+    </head>
+    <body>
+      <div class="table-users">
+        <div class="header">Users</div>
+          <table cellspacing="0">
+            <tr>
+              <th width="50px">Id</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Post Code</th>
+              <th>Phone</th>
+              <th>E-Mail</th>
+              <th>Hours</th>
+              <th>Map</th>
+            </tr>
 
-        <div class="page-data">
-         <div class="data-table">
-            <table border="1" cellpadding="7" cellspacing="7">
-                <tr>
-                    <th width="50px">Id</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Post Code</th>
-                    <th>Phone</th>
-                    <th>E-Mail</th>
-                    <th>Hours</th>
-                    <th>Map</th>
-                </tr>
+            <% if(data.length){
 
-                <% if(data.length){
+            for(var i = 0;i < data.length;i++) { %>
 
-                 for(var i = 0;i < data.length;i++) { %>
-
-                <tr>
-                    <td><%=data[i].id%></td>
-                    <td><%=data[i].name%></td>
-                    <td><%=data[i].address%></td>
-                    <td><%=data[i].postcode%></td>
-                    <td><%=data[i].phone%></td>
-                    <td><%=data[i].email%></td>
-                    <td><%=data[i].hours%></td>
-                    <td><a href="<%=data[i].map%>">Map</a></td>
-                </tr>
+            <tr>
+              <td><%=data[i].id%></td>
+              <td><%=data[i].name%></td>
+              <td><%=data[i].address%></td>
+              <td><%=data[i].postcode%></td>
+              <td><%=data[i].phone%></td>
+              <td><%=data[i].email%></td>
+              <td><%=data[i].hours%></td>
+              <td><a href="<%=data[i].map%>">Map</a></td>
+            </tr>
             <% }
 
-             }else{ %>
-                 <tr>
-                    <td colspan="3">No user</td>
-                 </tr>
+            }else{ %>
+            <tr>
+              <td colspan="3">No user</td>
+            </tr>
             <% } %>
-
-
-
-            </table>
-         </div>
+          </table>
         </div>
-
-<%- include layouts/footer.ejs %>
+        <div id="footer">
+          <img src="/../images/RAC_WA.png" align="middle">
+        </div>
+      </body>
+</html>
