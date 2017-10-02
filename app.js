@@ -54,7 +54,7 @@ app.use(
 
 
 // Index
-app.get('/', locations.listall));
+app.get('/', locations.listall);
 
 // Base API
 app.get('/locations/details/:postcode', locations.details);
