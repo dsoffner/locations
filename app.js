@@ -63,7 +63,6 @@ app.get('/locations/details/:postcode', locations.details);
 
 // Web application
 app.get('/locationsweb', locationsweb.listall);
-app.get('/locationsweb/list', locationsweb.listsummary);
 app.get('/locationsweb/details/:postcode', locationsweb.details);
 
 
