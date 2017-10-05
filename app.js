@@ -54,7 +54,7 @@ app.use(
 
 
 // Index
-app.get('/', routes.index);
+app.get('/', locationsweb.listall);
 
 // Base API
 app.get('/locations', locations.listall);
